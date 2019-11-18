@@ -8,27 +8,35 @@ public class Flight {
 	private int totalSeats, remainingSeats;
 	private Date departureTimeDate, arrivalTimeDate;
 	private int price;
-	//should the flights have an string with the origin and destination airport's code??
+	private Airline airline;
+	private Airport depatureAirport, arrivalAirport;
 
 	//constructor
 	public Flight(String flightNumber, int totalSeats, int remainingSeats, Date departureTimeDate,
-			Date arrivalTimeDate, int price) {
+			Date arrivalTimeDate, int price, Airline airline, Airport depatureAirport, Airport arrivalAirport) {
 		this.flightNumber = flightNumber;
 		this.totalSeats = totalSeats;
 		this.remainingSeats = remainingSeats;
 		this.departureTimeDate = departureTimeDate;
 		this.arrivalTimeDate = arrivalTimeDate;
 		this.price = price;
+		this.airline = airline;
+		this.depatureAirport = depatureAirport;
+		this.arrivalAirport = arrivalAirport;
 	}
 	public Flight() {
 	}
+	
 	public Flight(Flight f) {
-		this.flightNumber = f.flightNumber;
-		this.totalSeats = f.totalSeats;
-		this.remainingSeats = f.remainingSeats;
-		this.departureTimeDate = f.departureTimeDate;
-		this.arrivalTimeDate = f.arrivalTimeDate;
-		this.price = f.price;
+		this.flightNumber = f.getFlightNumber();
+		this.totalSeats = f.getTotalSeats();
+		this.remainingSeats = f.getRemainingSeats();
+		this.departureTimeDate = f.getDepartureTimeDate();
+		this.arrivalTimeDate = f.getArrivalTimeDate();
+		this.price = f.getPrice();
+		this.airline = f.getAirline();
+		this.depatureAirport = f.getDepatureAirport();
+		this.arrivalAirport = f.getArrivalAirport();
 	}
 	
 	//getters and setters
@@ -68,6 +76,23 @@ public class Flight {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
+	public Airline getAirline() {
+		return airline;
+	}
+	public void setAirline(Airline airline) {
+		this.airline = airline;
+	}
+	public Airport getDepatureAirport() {
+		return depatureAirport;
+	}
+	public void setDepatureAirport(Airport depatureAirport) {
+		this.depatureAirport = depatureAirport;
+	}
+	public Airport getArrivalAirport() {
+		return arrivalAirport;
+	}
+	public void setArrivalAirport(Airport arrivalAirport) {
+		this.arrivalAirport = arrivalAirport;
+	}
 
 }

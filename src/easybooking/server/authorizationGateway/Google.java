@@ -1,5 +1,17 @@
 package easybooking.server.authorizationGateway;
 
-public class Google {
+public class Google implements IAuthorization {
+
+	@Override
+	public String login() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String signUp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
