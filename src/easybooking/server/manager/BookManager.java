@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		this.serverName = serverName;
 	}
 	
-	public boolean pay(Reservation reservation) throws RemoteException{
+	public boolean pay() throws RemoteException{
 		return false;
 	}
 	public boolean signUp(String email, String password, String firstname, String lastname)throws RemoteException{
@@ -36,10 +37,10 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 	public boolean book(Flight flight) throws RemoteException{
 		return false;
 	}
-	public Map<String, List<FlightDTO>> searchAirportDate(String origin, String destination, Timestamp timestampOrigin, Timestamp timestampDestination){
+	public HashMap<String, ArrayList<FlightDTO>> searchAirportDate(String origin, String destination, Timestamp timestampOrigin, Timestamp timestampDestination){
 		return null;
 	}
-	public boolean chooseFlight(Flight flight) throws RemoteException{
+	public boolean chooseFlight(FlightDTO flight) throws RemoteException{
 		return false;
 	}
 	

@@ -54,8 +54,13 @@ public class User {
 	
 	public boolean bookFlight(ArrayList<Passenger> passenger) {
 		for(Flight flight : chosenFlight) {
+			//Later for every reservation method call pay()
 			Reservation reservation = new Reservation(passenger, flight);
 		}
+		return true;
+	}
+	
+	public boolean pay() {
 		return true;
 	}
 }
