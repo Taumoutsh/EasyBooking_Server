@@ -10,24 +10,97 @@
 	<property name="rmireg.server.IP" value="127.0.0.1"/>
 	<property name="server.name" value="EasyBooking"/>
 	<property name="policy.file" location="security/java.policy"/>
+	
+    <!-- Classpath -->
+    <path id="full.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <pathelement location="${bin.dir}"/>
+        <pathelement location="${resources.dir}"/>
+    </path>
+	
+	<!-- TARGET : clean -->
+	    <target name="clean">
+	        <delete includeEmptyDirs="true" quiet="true">
+	            <fileset dir="${bin.dir}" includes="**/*.*"/>
+	        </delete>
+			<delete dir="${bin.dir}"/>
+	    </target>
+	
+	<!-- TARGET : prepare -->
+	    <target name="prepare">
+	        <mkdir dir="${bin.dir}"/>
+	    </target>
+	
+	<!-- TARGET : compile -->
+	    <target name="compile" depends="clean, prepare">
+	        <javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="full.classpath" includeantruntime="no">
+	            <include name="**/*.java"/>
+	        </javac>
+	    </target>
+	
+	<!-- TARGET : enhance -->
+	    <target name="enhance" depends="compile">
+	    	<taskdef name="enhancer" classpathref="full.classpath" classname="org.datanucleus.enhancer.EnhancerTask" />
+	    	
+	   		<enhancer classpathref="full.classpath" failonerror="true">
+	            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	            <fileset dir="${bin.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+	   		</enhancer>
+	    </target>
+	
+	<!-- TARGET : SchemaTool "create" -->
+	    <target name="createschema" depends="enhance">
+	        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+	        <schematool mode="create" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
+	            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	            <fileset dir="${bin.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+	        </schematool>
+	    </target>
+	
+	<!-- TARGET : SchemaTool "delete" -->
+	    <target name="deleteschema">
+	        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+	    	<schematool mode="delete" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
+	    		<sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	        	<fileset dir="${bin.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+	        </schematool>
+	    </target>
+	
+	<!-- TARGET : Run -->	
+		<target name="run" depends="createschema">
+	        <java classname="classes.Main" classpathref="full.classpath" fork="true">
+	        	<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
+			</java>
+	    </target>
 
 	<target name="help">
-		<echo>Usage: ant [build | export | server ]</echo>
+		<echo>Usage: ant [build | export | server ] - Ändern!</echo>
 	</target>
 
-	<target name="build" description="Builds the project">
+	
+	<!--<target name="build" description="Builds the project">
 		<delete dir="${build.dir}"/>
 		<mkdir dir="${build.dir}"/>
 		<javac srcdir="${source.dir}" destdir="${build.dir}" classpath="${classpath}" deprecation="true" fork="true" includeantruntime="no"/>
-    </target>
+    </target>-->
 
-	<target name="export" depends="build" description="Export the project into a .jar file">
+	<!--<target name="export" depends="build" description="Export the project into a .jar file">
 		<delete dir="${dist.dir}"/>
 		<mkdir dir="${dist.dir}"/>
 		<jar destfile="${dist.dir}/${export.file}" basedir="${build.dir}" includes="**/I**.class, **/**DTO.class"/>
-	</target>
+	</target>-->
 
-	<target name="server" depends="build" description="Runs Server program">
+	<!--<target name="server" depends="build" description="Runs Server program">
 		<java classname="easybooking.server.manager.BookManagerServer" classpath="${classpath}" fork="true">
         	<jvmarg value="-Djava.rmi.server.codebase=file:${build.dir}/"/>
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>
@@ -35,5 +108,5 @@
 	 		<arg value="${rmireg.server.port}"/>
 			<arg value="${server.name}"/>
         </java>
-    </target>
+    </target>-->
 </project>
