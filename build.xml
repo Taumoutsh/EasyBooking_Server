@@ -55,7 +55,7 @@
 	    </target>
 	
 	<!-- TARGET : SchemaTool "create" -->
-	    <target name="createschema" depends="enhance">
+	    <target name="database" depends="enhance">
 	        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
 
 	        <schematool mode="create" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
@@ -77,38 +77,31 @@
 	            </fileset>
 	        </schematool>
 	    </target>
-	
-	<!-- TARGET : Run -->	
-		<target name="run" depends="createschema">
-	        <java classname="classes.Main" classpathref="full.classpath" fork="true">
-	        	<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
-			</java>
-	    </target>
 
 	<target name="help">
-		<echo>Usage: ant [build | export | server ] - Ändern!</echo>
+		<echo>Usage: ant [database | build | export | server ]</echo>
 	</target>
 
 	
-	<!--<target name="build" description="Builds the project">
-		<delete dir="${build.dir}"/>
-		<mkdir dir="${build.dir}"/>
-		<javac srcdir="${source.dir}" destdir="${build.dir}" classpath="${classpath}" deprecation="true" fork="true" includeantruntime="no"/>
-    </target>-->
+	<target name="build" description="Builds the project">
+		<delete dir="${bin.dir}"/>
+		<mkdir dir="${bin.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="full.classpath" deprecation="true" fork="true" includeantruntime="no"/>
+    </target>
 
-	<!--<target name="export" depends="build" description="Export the project into a .jar file">
+	<target name="export" depends="build" description="Export the project into a .jar file">
 		<delete dir="${dist.dir}"/>
 		<mkdir dir="${dist.dir}"/>
-		<jar destfile="${dist.dir}/${export.file}" basedir="${build.dir}" includes="**/I**.class, **/**DTO.class"/>
-	</target>-->
+		<jar destfile="${dist.dir}/${export.file}" basedir="${bin.dir}" includes="**/I**.class, **/**DTO.class"/>
+	</target>
 
-	<!--<target name="server" depends="build" description="Runs Server program">
+	<target name="server" depends="build" description="Runs Server program">
 		<java classname="easybooking.server.manager.BookManagerServer" classpath="${classpath}" fork="true">
-        	<jvmarg value="-Djava.rmi.server.codebase=file:${build.dir}/"/>
+        	<jvmarg value="-Djava.rmi.server.codebase=file:${bin.dir}/"/>
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>
         	<arg value="${rmireg.server.IP}"/>
 	 		<arg value="${rmireg.server.port}"/>
 			<arg value="${server.name}"/>
         </java>
-    </target>-->
+    </target>
 </project>
