@@ -32,7 +32,7 @@
 	
 	<!-- TARGET : prepare -->
 	    <target name="prepare">
-	        <mkdir dir="${build.dir}"/>
+	        <mkdir dir="${bin.dir}"/>
 	    </target>
 	
 	<!-- TARGET : compile -->
