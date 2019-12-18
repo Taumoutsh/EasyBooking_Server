@@ -1,0 +1,585 @@
+18-12-19_02:22:50 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:22:50 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:22:50 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:22:50 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:22:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:22:52 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:22:52 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:22:52 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:26:24 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:26:24 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:26:24 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:26:24 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:26:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:26:26 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:26:27 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:38:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:38:21 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:38:21 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:38:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:38:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:38:23 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:38:23 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:39:37 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:39:37 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:39:37 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:39:37 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:39:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:39:39 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:39:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:39:40 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:39:40 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:40:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:40:21 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:40:21 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:40:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:40:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:40:24 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:40:24 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:41:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:41:21 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:41:21 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:41:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:41:21 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:41:22 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:41:23 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:41:23 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:42:48 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:42:48 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:42:48 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:42:48 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:42:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:42:50 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:42:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:42:51 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:42:51 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:45:39 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:45:40 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:45:40 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:45:40 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:45:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:45:41 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:45:42 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:45:42 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:48:26 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:48:26 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:48:26 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:48:26 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:48:26 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:48:28 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:48:28 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:48:28 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:49:38 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:49:38 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:49:38 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:49:38 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:49:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:49:40 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:49:40 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:50:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:50:37 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:50:37 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:50:37 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:50:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:50:39 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:50:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:50:40 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:50:40 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully
+18-12-19_02:54:49 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.2.1) for API "JDO"
+18-12-19_02:54:49 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class" with enhanced definition
+18-12-19_02:54:49 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class" with enhanced definition
+18-12-19_02:54:49 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creation of the schema for classes
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.1.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.1.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.1.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m12.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.17.jar
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}
+18-12-19_02:54:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+18-12-19_02:54:51 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Input Files
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Authorization.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Facebook.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Google.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\IAuthorization.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\authorizationGateway\Twitter.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IReservationDAO.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\IUserDAO.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\ReservationDAO.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\dao\UserDAO.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airline.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Airport.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Flight.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Passenger.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\Reservation.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\classes\User.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightAssembler.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\data\dto\FlightDTO.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Eurowings.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\FlightAirline.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\IFlightAirline.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Lufthansa.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\flightsGateway\Ryanair.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManager.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\manager\BookManagerServer.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\IPayment.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Mastercard.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\PayPal.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Payment.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\payingGateway\Visa.class
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\${bin.dir}\easybooking\server\remote\IBookManager.class
+18-12-19_02:54:51 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:54:51 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+18-12-19_02:54:51 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool completed successfully

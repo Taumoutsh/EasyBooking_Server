@@ -2,6 +2,9 @@ package easybooking.server.data.classes;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.jdo.annotations.*;
+
+@PersistenceCapable
 
 public class Reservation{
 	private int paymentCode, numberOfSeats;

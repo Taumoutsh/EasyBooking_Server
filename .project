@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>${bin.dir}</name>
+			<type>2</type>
+			<location>C:/SoftLabs/SD/workspace/EasyBooking_Server/${bin.dir}</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -1,11 +1,15 @@
 package easybooking.server.data.classes;
 
 import java.util.ArrayList;
+import javax.jdo.annotations.*;
 
+@PersistenceCapable
 public class User {
 	private String email;
+	private String password;
 	private int paymentMethod, authorizationMethod;
 	private Airport defaultDepartureAirport;
+	@NotPersistent
 	private ArrayList<Flight> chosenFlight;
 	
 	public User(String email, int paymentMethod, int authorizationMethod, Airport defaultDepartureAirport) {
