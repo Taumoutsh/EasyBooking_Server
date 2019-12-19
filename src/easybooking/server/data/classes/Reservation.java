@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.jdo.annotations.*;
 
-@PersistenceCapable
+@PersistenceCapable(detachable = "true")
 
 public class Reservation{
 	private int paymentCode, numberOfSeats;
