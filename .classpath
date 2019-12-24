@@ -10,5 +10,4 @@
 	<classpathentry kind="lib" path="lib/datanucleus-core-5.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/datanucleus-cache-5.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/datanucleus-api-jdo-5.2.1.jar"/>
-	<classpathentry kind="output" path="bin"/>
 </classpath>

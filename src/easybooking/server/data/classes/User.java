@@ -1,16 +1,23 @@
 package easybooking.server.data.classes;
 
+import java.util.ArrayList;
+import javax.jdo.annotations.*;
+
+@PersistenceCapable(detachable = "true")
+@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 public class User {
 	private String email;
-	private int paymentMethod, autorizationMethod;
+	private String password;
+	private int paymentMethod, authorizationMethod;
 	private Airport defaultDepartureAirport;
-	//private HashMap<Integer,Reservation>reservations;//if we want to have an array of the reservations
-	public User(String email, int paymentMethod, int autorizationMethod, Airport defaultDepartureAirport) {
+	@NotPersistent
+	private ArrayList<Flight> chosenFlight;
+	
+	public User(String email, int paymentMethod, int authorizationMethod, Airport defaultDepartureAirport) {
 		this.email = email;
 		this.paymentMethod = paymentMethod;
-		this.autorizationMethod = autorizationMethod;
+		this.authorizationMethod = authorizationMethod;
 		this.defaultDepartureAirport = defaultDepartureAirport;
-		//this.reservations = new HashMap<Integer, Reservation>();
 	}
 	public String getEmail() {
 		return email;
@@ -24,25 +31,41 @@ public class User {
 	public void setPaymentMethod(int paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
-	public int getAutorizationMethod() {
-		return autorizationMethod;
+	public int getAuthorizationMethod() {
+		return authorizationMethod;
 	}
-	public void setAutorizationMethod(int autorizationMethod) {
-		this.autorizationMethod = autorizationMethod;
-	}
+	public void setAuthorizationMethod(int autorizationMethod) {
+		this.authorizationMethod = autorizationMethod;
+	} 
 	public Airport getDefaultDepartureAirport() {
 		return defaultDepartureAirport;
 	}
 	public void setDefaultDepartureAirport(Airport defaultDepartureAirport) {
 		this.defaultDepartureAirport = defaultDepartureAirport;
 	}
-	/*public HashMap<Integer, Reservation>getReservations() {
-		return reservations;
+	
+	public void signUp() {
+		
 	}
-	public Reservation getReservation(int paymentCode) {
-		return this.reservations.get(paymentCode);
+	
+	public void login() {
+		
 	}
-	public void addReservation(Reservation r) {
-		this.reservations.put(r.getPaymentCode(),r);
-	}*/
+	
+	public boolean choseFlight(Flight flight) {
+		chosenFlight.add(flight);
+		return true;
+	}
+	
+	public boolean bookFlight(ArrayList<Passenger> passenger) {
+		for(Flight flight : chosenFlight) {
+			//Later for every reservation method call pay()
+			Reservation reservation = new Reservation(passenger, flight);
+		}
+		return true;
+	}
+	
+	public boolean pay() {
+		return true;
+	}
 }

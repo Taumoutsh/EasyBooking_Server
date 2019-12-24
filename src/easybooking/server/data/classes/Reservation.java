@@ -1,28 +1,27 @@
 package easybooking.server.data.classes;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import javax.jdo.annotations.*;
 
-public class Reservation implements IVisa, IMasterCard, IPayPal{
-	private int flightCode, paymentCode, numberOfSeats;
-	private Passenger passengers[];
+@PersistenceCapable(detachable = "true")
+
+public class Reservation{
+	private int paymentCode, numberOfSeats;
+	private ArrayList<Passenger> passenger;
+	private Flight flight;
 	
 	//constructor
-	public Reservation(int flightCode, int numberOfSeats) {
-		this.flightCode = flightCode;
+	public Reservation(ArrayList<Passenger> passenger, Flight flight) {
 		this.paymentCode = -1;// this means the reservation is not paid, once the method pay() is used the payment code is changed
-		this.numberOfSeats = numberOfSeats;
-		this.passengers = new Passenger[numberOfSeats];
+		this.numberOfSeats = passenger.size();
+		this.passenger = passenger;
+		this.flight = flight;
 	}
 	
 	//getter setter
 	public int getPaymentCode() {
 		return paymentCode;
-	}
-	public int getFlightCode() {
-		return flightCode;
-	}
-	public void setFlightCode(int flightCode) {
-		this.flightCode = flightCode;
 	}
 	public void setPaymentCode(int paymentCode) {
 		this.paymentCode = paymentCode;
@@ -33,18 +32,30 @@ public class Reservation implements IVisa, IMasterCard, IPayPal{
 	public void setNumberOfSeats(int numberOfSeats) {
 		this.numberOfSeats = numberOfSeats;
 	}
-	public Passenger[] getPassengers() {
-		return passengers;
+	public ArrayList<Passenger> getPassengers() {
+		return passenger;
 	}
-	public void setPassengers(Passenger[] passengers) {
-		this.passengers = passengers;
+	public void setPassengers(Passenger passenger) {
+		this.passenger.add(passenger);
+	}
+	
+	public void setFlight(Flight flight) {
+		this.flight = flight;
+	}
+	
+	public Flight getFlight() {
+		return flight;
 	}
 
 	//method
 	public void pay() {
 		
+		
+		
+		//This code should be used in payingGateway without Scanner, the information will be handeled by the supplier
+		
 		//choose the payment service
-		 int selection;
+		/* int selection;
 		 int paymentCode = 0;
 		 Scanner entradaEscaner = new Scanner (System.in); //Creaci�n de un objeto Scanner
 		do {
@@ -103,12 +114,12 @@ public class Reservation implements IVisa, IMasterCard, IPayPal{
 			System.err.println("there has been a problem selecting the payment method");
 		}
 		
-		this.paymentCode = paymentCode;//change the payment code
+		this.paymentCode = paymentCode;//change the payment code*/
 		
 	}
 	
 	
-	public int payPayPal(String email, String password) {
+	/*public int payPayPal(String email, String password) {
 		//paypal authorizates the account
 		System.out.println("acceding to the account of "+email);
 		return (int) (Math.random()*Integer.MAX_VALUE);//this can cause repetition of paymentCode
@@ -122,6 +133,6 @@ public class Reservation implements IVisa, IMasterCard, IPayPal{
 	public int payVisa(int cardNumber, String UserName, String UserSurname, int expirationMonth, int expirationYear,
 			int criptogram) {
 		return  (int) (Math.random()*Integer.MAX_VALUE);
-	}
+	}*/
 	
 }
