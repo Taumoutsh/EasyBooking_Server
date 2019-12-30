@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import easybooking.server.authorizationGateway.AuthorizationGatewayFactory;
 import easybooking.server.authorizationGateway.IAuthorization;
 import easybooking.server.data.classes.Flight;
 import easybooking.server.data.classes.Reservation;
@@ -31,12 +32,22 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 	}
 	
 	public boolean signUp(String email, String password, String firstname, String lastname) throws RemoteException{
+		
+		AuthorizationGatewayFactory.getAuthorizationGatewayFactory();
+		
+		IAuthorization authorization = AuthorizationGatewayFactory.createGateway("Google");
+		
 		boolean result = authorization.signUp(email,  password, firstname, lastname);
 		return result;
 	}
 	
 	public boolean logIn(String email, String password) throws RemoteException{
-		boolean result = authorization.login(email,  password);
+		
+		AuthorizationGatewayFactory.getAuthorizationGatewayFactory();
+		
+		IAuthorization authorization = AuthorizationGatewayFactory.createGateway("Google");
+		
+		boolean result = authorization.logIn(email,  password);
 		return result;
 	}
 	

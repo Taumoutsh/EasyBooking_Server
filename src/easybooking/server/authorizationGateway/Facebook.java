@@ -3,7 +3,7 @@ package easybooking.server.authorizationGateway;
 public class Facebook implements IAuthorization {
 
 	@Override
-	public boolean login(String email, String password) {
+	public boolean logIn(String email, String password) {
 		// TODO Auto-generated method stub
 		return true;
 	}
