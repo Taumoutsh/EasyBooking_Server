@@ -9,8 +9,7 @@ import easybooking.server.data.classes.Flight;
 public class Ryanair implements IFlightAirline {
 
 	@Override
-	public HashMap<String, ArrayList<Flight>> searchFlightDate(String depature, String destination,
-			Timestamp timestampDepature, Timestamp timestampDestination) {
+	public HashMap<String, ArrayList<Flight>> searchFlightDate(String depature, String destination) {
 		// TODO Auto-generated method stub
 		return null;
 	}

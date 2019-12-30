@@ -9,13 +9,13 @@
 	<property name="export.file" value="EasyBooking.jar"/>
 	<property name="rmireg.server.port" value="1099"/>
 	<property name="rmireg.server.IP" value="127.0.0.1"/>
-	<property name="server.name" value="EasyBooking"/>
+	<property name="server.name" value="EasyBooking_Server"/>
 	<property name="policy.file" location="security/java.policy"/>
 	
     <!-- Classpath -->
     <path id="full.classpath">
         <fileset dir="${lib.dir}">
-            <include name="**/*.jar"/>
+            <include name="*.jar"/>
         </fileset>
         <pathelement location="${bin.dir}"/>
         <pathelement location="${resources.dir}"/>
@@ -98,7 +98,6 @@
 		<java classname="easybooking.server.manager.BookManagerServer" classpathref="full.classpath" fork="true">
         	<jvmarg value="-Djava.rmi.server.codebase=file:${bin.dir}/"/>
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>
-			<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
         	<arg value="${rmireg.server.IP}"/>
 	 		<arg value="${rmireg.server.port}"/>
 			<arg value="${server.name}"/>
