@@ -12,4 +12,5 @@ public interface IBookManager extends Remote {
 	public boolean logIn(String email, String password) throws RemoteException;
 	public boolean bookFlight(FlightDTO flight) throws RemoteException;
 	public HashMap<String, ArrayList<FlightDTO>> searchFlight(String origin, String destination) throws RemoteException;
+	public HashMap<String, ArrayList<FlightDTO>> printAllFlights() throws RemoteException;
 }

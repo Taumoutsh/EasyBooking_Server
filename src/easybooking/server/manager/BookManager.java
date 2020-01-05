@@ -3,21 +3,30 @@ package easybooking.server.manager;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import easybooking.server.authorizationGateway.AuthorizationGatewayFactory;
 import easybooking.server.authorizationGateway.IAuthorization;
+import easybooking.server.data.classes.Airline;
+import easybooking.server.data.classes.Airport;
 import easybooking.server.data.classes.Flight;
 import easybooking.server.data.classes.Reservation;
+import easybooking.server.data.dto.FlightAssembler;
 import easybooking.server.data.dto.FlightDTO;
+import easybooking.server.flightsGateway.Eurowings;
+import easybooking.server.flightsGateway.IFlightAirline;
+import easybooking.server.flightsGateway.Lufthansa;
+import easybooking.server.flightsGateway.Ryanair;
 import easybooking.server.remote.IBookManager;
 
 // THIS IS THE APPLICATION SERVICE CLASS
 public class BookManager extends UnicastRemoteObject implements IBookManager {
 	
 	private ArrayList<Flight> cacheFlights = new ArrayList<>();
+	private HashMap<String, ArrayList<Flight>> allFlights = new HashMap<String, ArrayList<Flight>>();
 	
 	private static final long serialVersionUID = 1L;
 	String serverName;
@@ -25,6 +34,7 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 	
 	public BookManager(String serverName) throws RemoteException {
 		this.serverName = serverName;
+		
 	}
 	
 	public boolean pay() throws RemoteException{
@@ -52,7 +62,54 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 	}
 	
 	public HashMap<String, ArrayList<FlightDTO>> searchFlight(String origin, String destination){
-		return null;
+		
+		FlightAssembler fa = new FlightAssembler();
+		HashMap<String, ArrayList<FlightDTO>> allFlightsDTO = new HashMap<String, ArrayList<FlightDTO>>();
+		
+		// Calling the Airlines Gateway
+		
+		IFlightAirline eurowings = new Eurowings();
+		ArrayList<Flight> eurowingsFlights = eurowings.searchFlightDate(origin, destination);
+		
+		IFlightAirline lufthansa = new Lufthansa();
+		ArrayList<Flight> lufthansaFlights = lufthansa.searchFlightDate(origin, destination);
+		
+		IFlightAirline ryanair = new Ryanair();
+		ArrayList<Flight> ryanairFlights = ryanair.searchFlightDate(origin, destination);
+		
+		allFlights.put("Eurowings", eurowingsFlights);
+		allFlights.put("Lufthansa", lufthansaFlights);
+		allFlights.put("RyanAir", ryanairFlights);
+		
+		allFlightsDTO = fa.assemble(allFlights);
+		
+		return allFlightsDTO;
+		
+	}
+	
+	public HashMap<String, ArrayList<FlightDTO>> printAllFlights(){
+		
+		FlightAssembler fa = new FlightAssembler();
+		HashMap<String, ArrayList<FlightDTO>> allFlightsDTO = new HashMap<String, ArrayList<FlightDTO>>();
+		
+		// Calling the Airlines Gateway
+		
+		IFlightAirline eurowings = new Eurowings();
+		ArrayList<Flight> eurowingsFlights = eurowings.allFlights();
+		
+		IFlightAirline lufthansa = new Lufthansa();
+		ArrayList<Flight> lufthansaFlights = lufthansa.allFlights();
+		
+		IFlightAirline ryanair = new Ryanair();
+		ArrayList<Flight> ryanairFlights = ryanair.allFlights();
+		
+		allFlights.put("Eurowings", eurowingsFlights);
+		allFlights.put("Lufthansa", lufthansaFlights);
+		allFlights.put("RyanAir", ryanairFlights);
+		
+		allFlightsDTO = fa.assemble(allFlights);
+		
+		return allFlightsDTO;
 	}
 	
 	public boolean bookFlight(FlightDTO flight) throws RemoteException{

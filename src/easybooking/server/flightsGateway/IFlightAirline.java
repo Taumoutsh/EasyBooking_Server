@@ -7,5 +7,6 @@ import java.util.HashMap;
 import easybooking.server.data.classes.Flight;
 
 public interface IFlightAirline {
-	public HashMap<String, ArrayList<Flight>> searchFlightDate(String depature, String destination);
+	public ArrayList<Flight> allFlights();
+	public ArrayList<Flight> searchFlightDate(String depature, String destination);
 }

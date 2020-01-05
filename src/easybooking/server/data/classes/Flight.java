@@ -1,6 +1,6 @@
 package easybooking.server.data.classes;
 
-import java.sql.Date;
+import java.util.Date;;
 
 public class Flight {
 //properties
