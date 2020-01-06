@@ -15,7 +15,7 @@ public class Lufthansa implements IFlightAirline {
 	
 	public Lufthansa() {
 	
-		Airline ai1 = new Airline("Eurowings");
+		Airline ai1 = new Airline("Lufthansa");
 	
 		Airport a1 = new Airport("CDG", "Paris Charles De Gaulle");
 		Airport a2 = new Airport("NYC", "New-York John Fidzgerald Kennedy");
@@ -23,8 +23,8 @@ public class Lufthansa implements IFlightAirline {
 		Airport a4 = new Airport("LON", "London Gatwick");
 		Airport a5 = new Airport("AMS", "Amsterdam Schipol Airport");
 		
-		Flight f1 = new Flight("AF102", 100, 80, new Date(), new Date(), 30, ai1, a1, a2);
-		Flight f2 = new Flight("AF202", 100, 80, new Date(), new Date(), 30, ai1, a1, a5);
+		Flight f1 = new Flight("LU876", 100, 80, new Date(), new Date(), 30, ai1, a5, a1);
+		Flight f2 = new Flight("LU508", 100, 80, new Date(), new Date(), 30, ai1, a2, a3);
 		
 		arrayFlights.add(f1);
 		arrayFlights.add(f2);
@@ -34,14 +34,14 @@ public class Lufthansa implements IFlightAirline {
 		return arrayFlights;
 	}
 	
-	public ArrayList<Flight> searchFlightDate(String depature, String destination) {
+	public ArrayList<Flight> searchFlightDate(String departure, String destination) {
 		
 		ArrayList<Flight> flightByLocation = new ArrayList<Flight>();
 		
 		for(Flight flight : arrayFlights) {
 			
-			if(flight.getDepatureAirport().getLocation().equals(depature) || depature == null) {
-				if(flight.getArrivalAirport().getLocation().equals(destination) || destination == null) {
+			if(flight.getDepatureAirport().getLocation().contains(departure) || departure.isEmpty()) {
+				if(flight.getArrivalAirport().getLocation().contains(destination) || destination.isEmpty()) {
 					flightByLocation.add(flight);
 				}
 			}
