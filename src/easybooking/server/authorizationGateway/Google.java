@@ -15,7 +15,7 @@ public class Google implements IAuthorization, Cloneable {
 		
 		userConnected = new User();
 		accountUser = new ArrayList<User>();
-		accountUser.add(new User("1", "1", 1, 2));
+		accountUser.add(new User("sinan.thomas@gmail.com", "Deusto", 1, 2));
 		
 	}
 

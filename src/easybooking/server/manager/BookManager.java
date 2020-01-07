@@ -22,6 +22,10 @@ import easybooking.server.flightsGateway.Eurowings;
 import easybooking.server.flightsGateway.IFlightAirline;
 import easybooking.server.flightsGateway.Lufthansa;
 import easybooking.server.flightsGateway.Ryanair;
+import easybooking.server.payingGateway.IPaymentAdapter;
+import easybooking.server.payingGateway.MastercardAdapter;
+import easybooking.server.payingGateway.PayPalAdapter;
+import easybooking.server.payingGateway.VisaAdapter;
 import easybooking.server.remote.IBookManager;
 
 // THIS IS THE APPLICATION SERVICE CLASS
@@ -43,9 +47,21 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		
 	}
 	
-	public int pay() throws RemoteException{
+	public int pay(String payingMethod) throws RemoteException{
 		
-		this.paymentCode = 100;
+		IPaymentAdapter paymentAdapter = null;
+		
+		if(payingMethod.equals("Visa")){
+			paymentAdapter = new VisaAdapter();
+		}
+		if(payingMethod.equals("Mastercard")){
+			paymentAdapter = new MastercardAdapter();
+		}
+		if(payingMethod.equals("PayPal")){
+			paymentAdapter = new PayPalAdapter();
+		}
+		
+		this.paymentCode = paymentAdapter.pay();
 		
 		return paymentCode;
 	}
@@ -142,8 +158,6 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		ArrayList<Passenger> arrayPassengers = new ArrayList<Passenger>();
 		Flight bookedFlight = new Flight();
 		
-		System.out.println("Bonjour1");
-		
 		if(!(name1.isBlank()) && !(surname1.isBlank())){
 			if(!(name2.isBlank()) && !(surname2.isBlank())){
 				Passenger p2 = new Passenger(name2, surname2);
@@ -153,8 +167,6 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 			System.out.println(name1);
 			arrayPassengers.add(p1);
 		}
-		
-		System.out.println("Bonjour2");
 		
 		for(Map.Entry<String, ArrayList<Flight>> entry : allFlights.entrySet()) {
 		    String key = entry.getKey();
@@ -169,11 +181,9 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		    }
 		}
 		
-		System.out.println("Bonjour3");
-		
 		Reservation reservation = new Reservation(arrayPassengers, bookedFlight, userConnected, paymentCode);
 		
-		System.out.println("AFFICHAGE DE FIN DE PROCESSUS :");
+		System.out.println("PRINT END OF PROCESS :");
 		System.out.println("User connected is : "+userConnected.getEmail());
 		System.out.println("The passengers are : ");
 		
@@ -181,8 +191,8 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 			System.out.println(p.getName()+" "+p.getSurname());
 		}
 		
-		System.out.println("The flight choosen is the : "+bookedFlight.getFlightNumber()+ "from "+bookedFlight.getDepatureAirport().getLocation()+" to "+bookedFlight.getArrivalAirport().getLocation());
-		System.out.println("The payment code is :"+paymentCode);
+		System.out.println("The flight choosen is the : "+bookedFlight.getFlightNumber()+ " from "+bookedFlight.getDepatureAirport().getLocation()+" to "+bookedFlight.getArrivalAirport().getLocation());
+		System.out.println("The payment code is : "+paymentCode);
 		
 		//TO DO -> ReservationDAO
 		
