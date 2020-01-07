@@ -23,8 +23,8 @@ public class Ryanair implements IFlightAirline {
 	Airport a4 = new Airport("LON", "London Gatwick");
 	Airport a5 = new Airport("AMS", "Amsterdam Schipol Airport");
 	
-	Flight f1 = new Flight("RA110", 100, 80, new Date(), new Date(), 30, ai1, a4, a5);
-	Flight f2 = new Flight("RA674", 100, 80, new Date(), new Date(), 30, ai1, a3, a1);
+	Flight f1 = new Flight("RA110", 100, 80, "10-01-2020 08:00", "10-01-2020 08:50", 90, ai1, a4, a5);
+	Flight f2 = new Flight("RA674", 100, 80, "12-01-2020 16:00", "12-01-2020 17:00", 110, ai1, a3, a1);
 	
 	arrayFlights.add(f1);
 	arrayFlights.add(f2);

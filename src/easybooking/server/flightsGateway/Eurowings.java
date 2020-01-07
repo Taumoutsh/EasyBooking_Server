@@ -24,8 +24,8 @@ public class Eurowings implements IFlightAirline{
 		Airport a4 = new Airport("LON", "London Gatwick");
 		Airport a5 = new Airport("AMS", "Amsterdam Schipol Airport");
 		
-		Flight f1 = new Flight("EW123", 100, 80, new Date(), new Date(), 30, ai1, a3, a1);
-		Flight f2 = new Flight("EW256", 100, 80, new Date(), new Date(), 30, ai1, a5, a4);
+		Flight f1 = new Flight("EW123", 100, 80, "05-01-2020 13:00", "05-01-2020 14:00", 70, ai1, a3, a1);
+		Flight f2 = new Flight("EW256", 100, 80, "08-01-2020 17:00", "05-01-2020 17:50", 30, ai1, a5, a4);
 		
 		arrayFlights.add(f1);
 		arrayFlights.add(f2);

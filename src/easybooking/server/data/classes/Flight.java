@@ -6,14 +6,14 @@ public class Flight {
 //properties
 	private String flightNumber;
 	private int totalSeats, remainingSeats;
-	private Date departureTimeDate, arrivalTimeDate;
+	private String departureTimeDate, arrivalTimeDate;
 	private int price;
 	private Airline airline;
 	private Airport depatureAirport, arrivalAirport;
 
 	//constructor
-	public Flight(String flightNumber, int totalSeats, int remainingSeats, Date departureTimeDate,
-			Date arrivalTimeDate, int price, Airline airline, Airport depatureAirport, Airport arrivalAirport) {
+	public Flight(String flightNumber, int totalSeats, int remainingSeats, String departureTimeDate,
+			String arrivalTimeDate, int price, Airline airline, Airport depatureAirport, Airport arrivalAirport) {
 		this.flightNumber = flightNumber;
 		this.totalSeats = totalSeats;
 		this.remainingSeats = remainingSeats;
@@ -58,16 +58,16 @@ public class Flight {
 	public void setRemainingSeats(int remainingSeats) {
 		this.remainingSeats = remainingSeats;
 	}
-	public Date getDepartureTimeDate() {
+	public String getDepartureTimeDate() {
 		return departureTimeDate;
 	}
-	public void setDepartureTimeDate(Date departureTimeDate) {
+	public void setDepartureTimeDate(String departureTimeDate) {
 		this.departureTimeDate = departureTimeDate;
 	}
-	public Date getArrivalTimeDate() {
+	public String getArrivalTimeDate() {
 		return arrivalTimeDate;
 	}
-	public void setArrivalTimeDate(Date arrivalTimeDate) {
+	public void setArrivalTimeDate(String arrivalTimeDate) {
 		this.arrivalTimeDate = arrivalTimeDate;
 	}
 	public int getPrice() {
