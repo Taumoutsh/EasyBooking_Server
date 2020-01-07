@@ -13,7 +13,9 @@ import easybooking.server.authorizationGateway.IAuthorization;
 import easybooking.server.data.classes.Airline;
 import easybooking.server.data.classes.Airport;
 import easybooking.server.data.classes.Flight;
+import easybooking.server.data.classes.Passenger;
 import easybooking.server.data.classes.Reservation;
+import easybooking.server.data.classes.User;
 import easybooking.server.data.dto.FlightAssembler;
 import easybooking.server.data.dto.FlightDTO;
 import easybooking.server.flightsGateway.Eurowings;
@@ -31,34 +33,57 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 	private static final long serialVersionUID = 1L;
 	String serverName;
 	IAuthorization authorization;
+	User userConnected;
+	int paymentCode;
 	
 	public BookManager(String serverName) throws RemoteException {
 		this.serverName = serverName;
+		userConnected = new User();
+		paymentCode = 0;
 		
 	}
 	
-	public boolean pay() throws RemoteException{
-		return false;
+	public int pay() throws RemoteException{
+		
+		this.paymentCode = 100;
+		
+		return paymentCode;
 	}
 	
-	public boolean signUp(String email, String password, String firstname, String lastname) throws RemoteException{
+	public User getUser() {
+		return userConnected;
+	}
+	
+	public boolean signUp(String authorizationService, String email, String password, String firstname, String lastname) throws RemoteException{
 		
 		AuthorizationGatewayFactory.getAuthorizationGatewayFactory();
 		
-		IAuthorization authorization = AuthorizationGatewayFactory.createGateway("Google");
+		IAuthorization authorization = AuthorizationGatewayFactory.createGateway(authorizationService);
 		
 		boolean result = authorization.signUp(email,  password, firstname, lastname);
 		return result;
 	}
 	
-	public boolean logIn(String email, String password) throws RemoteException{
+	public boolean logIn(String authorizationService, String email, String password) throws RemoteException{
+		
+		boolean connected = false;
+		
+		System.out.println("Bonjour");
 		
 		AuthorizationGatewayFactory.getAuthorizationGatewayFactory();
 		
-		IAuthorization authorization = AuthorizationGatewayFactory.createGateway("Google");
+		IAuthorization authorization = AuthorizationGatewayFactory.createGateway(authorizationService);
 		
-		boolean result = authorization.logIn(email,  password);
-		return result;
+		userConnected = authorization.logIn(email, password);
+		
+		System.out.println(userConnected.getEmail()+" BookManager");
+		
+		if(!(userConnected.getEmail() == null))
+			connected = true;
+		
+		System.out.println(connected+" BookManager");
+		
+		return connected;
 	}
 	
 	public HashMap<String, ArrayList<FlightDTO>> searchFlight(String origin, String destination){
@@ -112,9 +137,54 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		return allFlightsDTO;
 	}
 	
-	public boolean bookFlight(FlightDTO flight) throws RemoteException{
+	public boolean bookFlight(String flightNumber, String name1, String surname1, String name2, String surname2) throws RemoteException{
 		
+		ArrayList<Passenger> arrayPassengers = new ArrayList<Passenger>();
+		Flight bookedFlight = new Flight();
 		
+		System.out.println("Bonjour1");
+		
+		if(!(name1.isBlank()) && !(surname1.isBlank())){
+			if(!(name2.isBlank()) && !(surname2.isBlank())){
+				Passenger p2 = new Passenger(name2, surname2);
+				arrayPassengers.add(p2);
+			}
+			Passenger p1 = new Passenger(name1, surname1);
+			System.out.println(name1);
+			arrayPassengers.add(p1);
+		}
+		
+		System.out.println("Bonjour2");
+		
+		for(Map.Entry<String, ArrayList<Flight>> entry : allFlights.entrySet()) {
+		    String key = entry.getKey();
+		    ArrayList<Flight> value = entry.getValue();
+		    
+		    for(Flight flight : value) {
+		    	if(flightNumber.equals(flight.getFlightNumber())){
+		    		bookedFlight = new Flight(flight.getFlightNumber(), flight.getTotalSeats(), flight.getRemainingSeats(),
+		    				flight.getDepartureTimeDate(), flight.getArrivalTimeDate(), flight.getPrice(),
+		    				flight.getAirline(), flight.getDepatureAirport(), flight.getArrivalAirport());
+		    	}
+		    }
+		}
+		
+		System.out.println("Bonjour3");
+		
+		Reservation reservation = new Reservation(arrayPassengers, bookedFlight, userConnected, paymentCode);
+		
+		System.out.println("AFFICHAGE DE FIN DE PROCESSUS :");
+		System.out.println("User connected is : "+userConnected.getEmail());
+		System.out.println("The passengers are : ");
+		
+		for(Passenger p : arrayPassengers) {
+			System.out.println(p.getName()+" "+p.getSurname());
+		}
+		
+		System.out.println("The flight choosen is the : "+bookedFlight.getFlightNumber()+ "from "+bookedFlight.getDepatureAirport().getLocation()+" to "+bookedFlight.getArrivalAirport().getLocation());
+		System.out.println("The payment code is :"+paymentCode);
+		
+		//TO DO -> ReservationDAO
 		
 		return false;
 	}

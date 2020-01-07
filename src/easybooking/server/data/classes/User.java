@@ -1,23 +1,21 @@
 package easybooking.server.data.classes;
 
 import java.util.ArrayList;
-import javax.jdo.annotations.*;
 
-@PersistenceCapable(detachable = "true")
-@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 public class User {
 	private String email;
 	private String password;
 	private int paymentMethod, authorizationMethod;
-	private Airport defaultDepartureAirport;
-	@NotPersistent
 	private ArrayList<Flight> chosenFlight;
 	
-	public User(String email, int paymentMethod, int authorizationMethod, Airport defaultDepartureAirport) {
+	public User(String email, String password, int paymentMethod, int authorizationMethod) {
 		this.email = email;
+		this.password = password;
 		this.paymentMethod = paymentMethod;
 		this.authorizationMethod = authorizationMethod;
-		this.defaultDepartureAirport = defaultDepartureAirport;
+	}
+	public User() {
+		// TODO Auto-generated constructor stub
 	}
 	public String getEmail() {
 		return email;
@@ -36,14 +34,14 @@ public class User {
 	}
 	public void setAuthorizationMethod(int autorizationMethod) {
 		this.authorizationMethod = autorizationMethod;
-	} 
-	public Airport getDefaultDepartureAirport() {
-		return defaultDepartureAirport;
-	}
-	public void setDefaultDepartureAirport(Airport defaultDepartureAirport) {
-		this.defaultDepartureAirport = defaultDepartureAirport;
 	}
 	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public void signUp() {
 		
 	}
@@ -60,7 +58,7 @@ public class User {
 	public boolean bookFlight(ArrayList<Passenger> passenger) {
 		for(Flight flight : chosenFlight) {
 			//Later for every reservation method call pay()
-			Reservation reservation = new Reservation(passenger, flight);
+			//Reservation reservation = new Reservation(passenger, flight);
 		}
 		return true;
 	}
