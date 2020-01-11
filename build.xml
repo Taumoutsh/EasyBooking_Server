@@ -101,6 +101,7 @@
         	<arg value="${rmireg.server.IP}"/>
 	 		<arg value="${rmireg.server.port}"/>
 			<arg value="${server.name}"/>
+
         </java>
     </target>
 </project>

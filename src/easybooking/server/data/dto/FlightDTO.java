@@ -11,6 +11,7 @@ public class FlightDTO  implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -6399389947707251421L;
+	
 	public FlightDTO(String flightNumber, int totalSeats, int remainingSeats, String departureTimeDate,
 			String arrivalTimeDate, int price, String airlineCode, String depatureAirportLocation,
 			String depatureAirportCode, String arrivalAirportLocation, String arrivalAirportCode) {

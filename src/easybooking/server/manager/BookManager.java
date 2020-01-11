@@ -18,6 +18,8 @@ import easybooking.server.data.classes.Reservation;
 import easybooking.server.data.classes.User;
 import easybooking.server.data.dto.FlightAssembler;
 import easybooking.server.data.dto.FlightDTO;
+import easybooking.server.flightsGateway.AirlineRMI;
+import easybooking.server.flightsGateway.AirlineSocket;
 import easybooking.server.flightsGateway.Eurowings;
 import easybooking.server.flightsGateway.IFlightAirline;
 import easybooking.server.flightsGateway.Lufthansa;
@@ -102,6 +104,8 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		return connected;
 	}
 	
+	/*
+	
 	public HashMap<String, ArrayList<FlightDTO>> searchFlight(String origin, String destination){
 		
 		FlightAssembler fa = new FlightAssembler();
@@ -109,14 +113,16 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		
 		// Calling the Airlines Gateway
 		
-		IFlightAirline eurowings = new Eurowings();
+		 IFlightAirline eurowings = new Eurowings();
 		ArrayList<Flight> eurowingsFlights = eurowings.searchFlightDate(origin, destination);
 		
 		IFlightAirline lufthansa = new Lufthansa();
 		ArrayList<Flight> lufthansaFlights = lufthansa.searchFlightDate(origin, destination);
 		
 		IFlightAirline ryanair = new Ryanair();
-		ArrayList<Flight> ryanairFlights = ryanair.searchFlightDate(origin, destination);
+		ArrayList<Flight> ryanairFlights = ryanair.searchFlightDate(origin, destination); 
+		
+		
 		
 		allFlights.put("Eurowings", eurowingsFlights);
 		allFlights.put("Lufthansa", lufthansaFlights);
@@ -126,7 +132,9 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		
 		return allFlightsDTO;
 		
-	}
+	} 
+	
+	*/
 	
 	public HashMap<String, ArrayList<FlightDTO>> printAllFlights(){
 		
@@ -135,18 +143,26 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		
 		// Calling the Airlines Gateway
 		
-		IFlightAirline eurowings = new Eurowings();
+		IFlightAirline airlineSocket = new AirlineSocket();
+		ArrayList<Flight> airlineSocketFlights = airlineSocket.allFlights();
+		
+		IFlightAirline airlineRMI = new AirlineRMI();
+		ArrayList<Flight> airlineRMIFlights = airlineRMI.allFlights();
+		
+		/* IFlightAirline eurowings = new Eurowings();
 		ArrayList<Flight> eurowingsFlights = eurowings.allFlights();
 		
 		IFlightAirline lufthansa = new Lufthansa();
 		ArrayList<Flight> lufthansaFlights = lufthansa.allFlights();
 		
 		IFlightAirline ryanair = new Ryanair();
-		ArrayList<Flight> ryanairFlights = ryanair.allFlights();
+		ArrayList<Flight> ryanairFlights = ryanair.allFlights(); */
 		
-		allFlights.put("Eurowings", eurowingsFlights);
-		allFlights.put("Lufthansa", lufthansaFlights);
-		allFlights.put("RyanAir", ryanairFlights);
+		allFlights.put("Airline Socket", airlineSocketFlights);
+		allFlights.put("Airline RMI", airlineRMIFlights);
+		
+		//allFlights.put("Lufthansa", lufthansaFlights);
+		//allFlights.put("RyanAir", ryanairFlights);
 		
 		allFlightsDTO = fa.assemble(allFlights);
 		
@@ -197,16 +213,5 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		//TO DO -> ReservationDAO
 		
 		return false;
-	}
-	
-	//This class is used to receive an Flight object for booking process because the user only receives an DTO object.
-	private Flight findFlightInCache (FlightDTO flightDTO) {
-		Flight returnFlight = new Flight();
-		for(Flight flight : cacheFlights) {
-			if(flight.getFlightNumber().equals(flightDTO.getFlightNumber())) {
-				returnFlight = flight;
-			}
-		}
-		return returnFlight;
 	}
 }
