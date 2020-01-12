@@ -56,7 +56,6 @@
 	<!-- TARGET : SchemaTool "create" -->
 	    <target name="database" depends="enhance">
 	        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
-
 	        <schematool mode="create" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
 	            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
 	            <fileset dir="${bin.dir}">
@@ -82,7 +81,7 @@
 	</target>
 
 	
-	<target name="build" description="Builds the project">
+	<target name="build" description="Builds the project" depends="database">
 		<delete dir="${bin.dir}"/>
 		<mkdir dir="${bin.dir}"/>
 		<javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="full.classpath" deprecation="true" fork="true" includeantruntime="no"/>
@@ -94,13 +93,15 @@
 		<jar destfile="${dist.dir}/${export.file}" basedir="${bin.dir}" includes="**/I**.class, **/**DTO.class"/>
 	</target>
 
-	<target name="server" depends="build" description="Runs Server program">
+	<target name="server" depends="database" description="Runs Server program">
 		<java classname="easybooking.server.manager.BookManagerServer" classpathref="full.classpath" fork="true">
         	<jvmarg value="-Djava.rmi.server.codebase=file:${bin.dir}/"/>
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>
+			<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
         	<arg value="${rmireg.server.IP}"/>
 	 		<arg value="${rmireg.server.port}"/>
 			<arg value="${server.name}"/>
+			
 
         </java>
     </target>

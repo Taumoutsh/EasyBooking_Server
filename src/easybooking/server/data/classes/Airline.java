@@ -1,5 +1,6 @@
 package easybooking.server.data.classes;
 
+
 public class Airline {
 	//properties
 	private String idAirline;

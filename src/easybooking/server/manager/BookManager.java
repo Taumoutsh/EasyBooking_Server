@@ -10,6 +10,10 @@ import java.util.Map;
 
 import easybooking.server.authorizationGateway.AuthorizationGatewayFactory;
 import easybooking.server.authorizationGateway.IAuthorization;
+import easybooking.server.dao.IPassengerDAO;
+import easybooking.server.dao.IReservationDAO;
+import easybooking.server.dao.PassengerDAO;
+import easybooking.server.dao.ReservationDAO;
 import easybooking.server.data.classes.Airline;
 import easybooking.server.data.classes.Airport;
 import easybooking.server.data.classes.Flight;
@@ -33,18 +37,21 @@ import easybooking.server.remote.IBookManager;
 // THIS IS THE APPLICATION SERVICE CLASS
 public class BookManager extends UnicastRemoteObject implements IBookManager {
 	
-	private ArrayList<Flight> cacheFlights = new ArrayList<>();
 	private HashMap<String, ArrayList<Flight>> allFlights = new HashMap<String, ArrayList<Flight>>();
 	
 	private static final long serialVersionUID = 1L;
 	String serverName;
 	IAuthorization authorization;
+	IReservationDAO reservationDAO;
+	IPassengerDAO passengerDAO;
 	User userConnected;
 	int paymentCode;
 	
 	public BookManager(String serverName) throws RemoteException {
 		this.serverName = serverName;
 		userConnected = new User();
+		reservationDAO = new ReservationDAO();
+		passengerDAO = new PassengerDAO();
 		paymentCode = 0;
 		
 	}
@@ -174,16 +181,6 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		ArrayList<Passenger> arrayPassengers = new ArrayList<Passenger>();
 		Flight bookedFlight = new Flight();
 		
-		if(!(name1.isBlank()) && !(surname1.isBlank())){
-			if(!(name2.isBlank()) && !(surname2.isBlank())){
-				Passenger p2 = new Passenger(name2, surname2);
-				arrayPassengers.add(p2);
-			}
-			Passenger p1 = new Passenger(name1, surname1);
-			System.out.println(name1);
-			arrayPassengers.add(p1);
-		}
-		
 		for(Map.Entry<String, ArrayList<Flight>> entry : allFlights.entrySet()) {
 		    String key = entry.getKey();
 		    ArrayList<Flight> value = entry.getValue();
@@ -197,18 +194,32 @@ public class BookManager extends UnicastRemoteObject implements IBookManager {
 		    }
 		}
 		
-		Reservation reservation = new Reservation(arrayPassengers, bookedFlight, userConnected, paymentCode);
+		Reservation reservation = new Reservation(bookedFlight.getFlightNumber(), userConnected.getEmail(), paymentCode);
+		
+		if(!(name1.isBlank()) && !(surname1.isBlank())){
+			if(!(name2.isBlank()) && !(surname2.isBlank())){
+				Passenger p2 = new Passenger(name2, surname2, reservation);
+				arrayPassengers.add(p2);
+			}
+			Passenger p1 = new Passenger(name1, surname1, reservation);
+			System.out.println(name1);
+			arrayPassengers.add(p1);
+		}
+		
+		boolean result = reservationDAO.storeReservation(reservation);
 		
 		System.out.println("PRINT END OF PROCESS :");
 		System.out.println("User connected is : "+userConnected.getEmail());
 		System.out.println("The passengers are : ");
 		
 		for(Passenger p : arrayPassengers) {
-			System.out.println(p.getName()+" "+p.getSurname());
+			boolean r = passengerDAO.storePassenger(p);
+			System.out.println(p.getName()+" "+p.getSurname()+", added in the db : "+r);
 		}
 		
 		System.out.println("The flight choosen is the : "+bookedFlight.getFlightNumber()+ " from "+bookedFlight.getDepatureAirport().getLocation()+" to "+bookedFlight.getArrivalAirport().getLocation());
 		System.out.println("The payment code is : "+paymentCode);
+		System.out.println("Stored in database : "+result);
 		
 		//TO DO -> ReservationDAO
 		

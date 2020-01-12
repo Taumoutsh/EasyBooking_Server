@@ -15,7 +15,7 @@ public class Twitter implements IAuthorization {
 		
 		userConnected = new User();
 		accountUser = new ArrayList<User>();
-		accountUser.add(new User("moreno.mikel@gmail.com", "Deusto", 3, 2));
+		accountUser.add(new User("moreno.mikel@gmail.com", "Deusto"));
 		
 	}
 
@@ -24,7 +24,7 @@ public class Twitter implements IAuthorization {
 		
 		for(User user : accountUser) {
 			if(user.getEmail().equals(email) && user.getPassword().equals(password))
-				userConnected = new User(user.getEmail(), user.getPassword(), user.getAuthorizationMethod(), user.getPaymentMethod());
+				userConnected = new User(user.getEmail(), user.getPassword());
 		}
 		
 		return userConnected;
@@ -35,7 +35,7 @@ public class Twitter implements IAuthorization {
 		if(!email.isEmpty() && !password.isEmpty())
 			return false;
 		else
-			accountUser.add(new User(email, password, 3, 1));
+			accountUser.add(new User(email, password));
 			return true;
 	}
 

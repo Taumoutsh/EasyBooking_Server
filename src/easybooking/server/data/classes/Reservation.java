@@ -1,23 +1,19 @@
 package easybooking.server.data.classes;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import javax.jdo.annotations.*;
 
-@PersistenceCapable(detachable = "true")
+@PersistenceCapable(detachable="true")
 public class Reservation{
-	private int paymentCode, numberOfSeats;
-	private ArrayList<Passenger> passenger;
-	private User user;
-	private Flight flight;
+	private int paymentCode;
+	private String userAddress;
+	private String flightCode;
 	
 	//constructor
-	public Reservation(ArrayList<Passenger> passenger, Flight flight, User user, int paymentCode) {
-		this.paymentCode = -1;// this means the reservation is not paid, once the method pay() is used the payment code is changed
-		this.numberOfSeats = passenger.size();
-		this.passenger = passenger;
-		this.flight = flight;
-		this.user = user;
+	public Reservation(String flightCode, String userAddress, int paymentCode) {
+		this.flightCode = flightCode;
+		this.userAddress = userAddress;
+		this.paymentCode = paymentCode;
 	}
 	
 	//getter setter
@@ -25,36 +21,24 @@ public class Reservation{
 	public int getPaymentCode() {
 		return paymentCode;
 	}
-	public User getUser() {
-		return user;
+	public String getUserAddress() {
+		return userAddress;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
 	}
 
 	public void setPaymentCode(int paymentCode) {
 		this.paymentCode = paymentCode;
 	}
-	public int getNumberOfSeats() {
-		return numberOfSeats;
-	}
-	public void setNumberOfSeats(int numberOfSeats) {
-		this.numberOfSeats = numberOfSeats;
-	}
-	public ArrayList<Passenger> getPassengers() {
-		return passenger;
-	}
-	public void setPassengers(Passenger passenger) {
-		this.passenger.add(passenger);
+	
+	public void setFlightCode(String flightCode) {
+		this.flightCode = flightCode;
 	}
 	
-	public void setFlight(Flight flight) {
-		this.flight = flight;
-	}
-	
-	public Flight getFlight() {
-		return flight;
+	public String getFlightCode() {
+		return flightCode;
 	}
 	
 }

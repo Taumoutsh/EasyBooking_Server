@@ -5,26 +5,26 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Transaction;
 
-import easybooking.server.data.classes.Reservation;
+import easybooking.server.data.classes.Passenger;
 
-public class ReservationDAO implements IReservationDAO{
+public class PassengerDAO implements IPassengerDAO{
 	
 	private PersistenceManagerFactory pmf;
 	
-	public ReservationDAO() {
+	public PassengerDAO() {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
 
 	@Override
-	public boolean storeReservation(Reservation reservation) {
+	public boolean storePassenger(Passenger passenger) {
 		boolean successful = false;
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	   
 	    try {
 	       tx.begin();
-	       System.out.println("   * Storing new Reservation: " + reservation);
-	       pm.makePersistent(reservation);
+	       System.out.println("   * Storing new Reservation: " + passenger);
+	       pm.makePersistent(passenger);
 	       tx.commit();
 	       successful = true;
 	    } catch (Exception ex) {

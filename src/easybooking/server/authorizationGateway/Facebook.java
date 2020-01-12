@@ -13,7 +13,7 @@ public class Facebook implements IAuthorization {
 	public Facebook() {
 		userConnected = new User();
 		accountUser = new ArrayList<User>();
-		accountUser.add(new User("merger.pascal@gmail.com", "Deusto", 2, 2));
+		accountUser.add(new User("merger.pascal@gmail.com", "Deusto"));
 		
 	}
 
@@ -22,7 +22,7 @@ public class Facebook implements IAuthorization {
 		
 		for(User user : accountUser) {
 			if(user.getEmail().equals(email) && user.getPassword().equals(password))
-				userConnected = new User(user.getEmail(), user.getPassword(), user.getAuthorizationMethod(), user.getPaymentMethod());
+				userConnected = new User(user.getEmail(), user.getPassword());
 		}
 		
 		return userConnected;
@@ -33,7 +33,7 @@ public class Facebook implements IAuthorization {
 		if(!email.isEmpty() && !password.isEmpty())
 			return false;
 		else
-			accountUser.add(new User(email, password, 2, 1));
+			accountUser.add(new User(email, password));
 			return true;
 	}
 

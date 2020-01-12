@@ -2,6 +2,7 @@ package easybooking.server.data.classes;
 
 import java.util.Date;;
 
+
 public class Flight {
 //properties
 	private String flightNumber;

@@ -15,7 +15,7 @@ public class Google implements IAuthorization, Cloneable {
 		
 		userConnected = new User();
 		accountUser = new ArrayList<User>();
-		accountUser.add(new User("sinan.thomas@gmail.com", "Deusto", 1, 2));
+		accountUser.add(new User("sinan.thomas@gmail.com", "Deusto"));
 		
 	}
 
@@ -24,7 +24,7 @@ public class Google implements IAuthorization, Cloneable {
 		
 		for(User user : accountUser) {
 			if(user.getEmail().equals(email) && user.getPassword().equals(password))
-				userConnected = new User(user.getEmail(), user.getPassword(), user.getAuthorizationMethod(), user.getPaymentMethod());
+				userConnected = new User(user.getEmail(), user.getPassword());
 		}
 		System.out.println(userConnected.getEmail()+" Google");
 		return userConnected;
@@ -35,7 +35,7 @@ public class Google implements IAuthorization, Cloneable {
 		if(!email.isEmpty() && !password.isEmpty())
 			return false;
 		else
-			accountUser.add(new User(email, password, 1, 1));
+			accountUser.add(new User(email, password));
 			return true;
 	}
 
